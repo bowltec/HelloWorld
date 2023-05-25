@@ -15,10 +15,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        greetingLabel.isHidden.toggle()
+        greetingButton.layer.cornerRadius = 10
     }
 
     @IBAction func greetingButtonDidTapped() {
+        greetingLabel.isHidden.toggle()
+        greetingButton.setTitle(greetingLabel.isHidden ? "Show label" : "Hide label",
+        for: .normal
+        )
     }
     
 }
